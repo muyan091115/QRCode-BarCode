@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-MM-v8J">
+                                <rect key="frame" x="149" y="180" width="77" height="30"/>
+                                <state key="normal" title="生成条形码"/>
+                                <connections>
+                                    <action selector="creatBarCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beH-RC-Rdg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K2-fH-aRT">
+                                <rect key="frame" x="126" y="120" width="123" height="30"/>
+                                <state key="normal" title="生成带图片二维码"/>
+                                <connections>
+                                    <action selector="creatCenterImageQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sz0-6F-Q8i"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUf-ef-RuF">
+                                <rect key="frame" x="50" y="292" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nUf-ef-RuF" secondAttribute="height" id="qO9-T0-Msd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-Ub-XRx">
+                                <rect key="frame" x="149" y="60" width="77" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="creatQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6D-kY-VKP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nUf-ef-RuF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="7Hg-wX-ZVn"/>
+                            <constraint firstItem="5K2-fH-aRT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Kl-ML-nED"/>
+                            <constraint firstItem="5K2-fH-aRT" firstAttribute="top" secondItem="oaS-Ub-XRx" secondAttribute="bottom" constant="30" id="Fep-Yt-j5i"/>
+                            <constraint firstItem="oaS-Ub-XRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAO-rQ-m2L"/>
+                            <constraint firstItem="oaS-Ub-XRx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="UJk-ke-aRj"/>
+                            <constraint firstItem="Bgf-MM-v8J" firstAttribute="top" secondItem="5K2-fH-aRT" secondAttribute="bottom" constant="30" id="d1m-PA-Ett"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nUf-ef-RuF" secondAttribute="bottom" constant="100" id="dPS-Zl-E1L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUf-ef-RuF" secondAttribute="trailing" constant="50" id="ugc-sY-kIk"/>
+                            <constraint firstItem="Bgf-MM-v8J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpf-aV-yxI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="nUf-ef-RuF" id="9GP-Th-gMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
